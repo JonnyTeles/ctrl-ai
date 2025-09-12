@@ -3,7 +3,7 @@
 ![Electron](https://img.shields.io/badge/Electron-202324?style=for-the-badge&logo=electron&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 
-[Release v1.0.2](https://github.com/JonnyTeles/ctrl-ai/releases/tag/1.0.2)
+[Release v1.0.2 (versão antiga - não funciona mais - atualização em breve)](https://github.com/JonnyTeles/ctrl-ai/releases/tag/1.0.2)
 
 --- 
 

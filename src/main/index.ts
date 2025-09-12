@@ -8,7 +8,8 @@ import * as dotenv from 'dotenv';
 import { clipBoardType } from '../types/clipboard';
 const envPath = path.join(process.cwd(), '.env');
 dotenv.config({ path: envPath });
-
+//TODO: COLOCAR PRO USUARIO SELECIONAR O TIPO DE INSTRUÇÃO PRA IA
+//MELHORAR FRONT
 const assetsDir = path.join(__dirname, '../renderer/assets');
 const icoFile = fs.readdirSync(assetsDir).find(file => file.endsWith('.ico'));
 const iconPath = icoFile ? path.join(assetsDir, icoFile) : undefined;
