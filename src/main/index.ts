@@ -131,7 +131,7 @@ ipcMain.handle('gpt-call', async (_e, prompt) => {
 
   const completion = await groq.chat.completions.create({
     messages: [{ role: 'user', content: `Responda diretamente sem precisar explicar:\n ${prompt}` }],
-    model: 'llama3-70b-8192',
+    model: 'openai/gpt-oss-20b',
   });
 
   return completion.choices[0].message.content;
