@@ -1,32 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CTRL + AI</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <title>CTRL + AI</title>
-  <link rel="stylesheet" href="./assets/style.css">
-</head>
+  <div id="toast" class="toast">Texto copiado!</div>
 
-<div id="toast" class="toast">Texto copiado!</div>
+  <body>
+    <div class="titlebar">
+      <img src="./assets/icon.ico" class="title-icon" />
+      <h1>Ctrl+AI</h1>
 
-<body>
-  <div class="titlebar">
-    <img src="./assets/icon.ico" class="title-icon">
-    <h1>Ctrl+AI</h1>
-    <button id="minimize" title="Minimizar">—</button>
-    <button id="maximize" title="Maximizar">☐</button>
-    <button id="close" title="Fechar">×</button>
-  </div>
-  <div class="main-content">
-    <h1 class="title">Clique com o scroll do mouse ou Ctrl + V para consultar a IA.</h1>
-    <div id="shortcut-hint" class="shortcut-hint">(Ctrl + I) atalho para ativar o app quando estiver em segundo plano</div>
-    <pre id="question" class="allow-select">Pergunta</pre>
+      <div class="browse">
+        <a href="config.html" class="browse-btn" title="Configurações">
+          <i data-lucide="settings"></i>
+          Configurações
+        </a>
+      </div>
+
+      <button id="minimize" title="Minimizar">—</button>
+      <button id="maximize" title="Maximizar">☐</button>
+      <button id="close" title="Fechar">×</button>
+    </div>
     <br>
-    <pre class="awnser allow-select" id="output">Resposta</pre>
-    <button id="clean" class="clean">Apagar</button>
-  </div>
-
-  <script type="module" src="./src/renderer.ts"></script>
-</body>
-
+    <div class="main-content">
+      <h1 class="title">
+        Clique com o scroll do mouse ou Ctrl + V para consultar a IA.
+      </h1>
+      <div id="shortcut-hint" class="shortcut-hint">
+        (Ctrl + I) atalho para ativar o app quando estiver em segundo plano
+      </div>
+      <pre id="question" class="allow-select">Pergunta</pre>
+      <br />
+      <pre class="awnser allow-select" id="output">Resposta</pre>
+      <button id="clean" class="clean">Apagar</button>
+    </div>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script type="module" src="./src/renderer.ts"></script>
+  </body>
 </html>

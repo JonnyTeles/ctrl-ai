@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CTRL + AI</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+
+  <div id="toast" class="toast">Configurações salvas!</div>
+
+  <body>
+    <div class="titlebar">
+      <img src="./assets/icon.ico" class="title-icon" />
+      <h1>Ctrl+AI</h1>
+
+      <div class="browse">
+        <a href="index.html" class="browse-btn" title="Início">
+          <i data-lucide="home"></i>
+          Início
+        </a>
+      </div>
+
+      <button id="minimize" title="Minimizar">—</button>
+      <button id="maximize" title="Maximizar">☐</button>
+      <button id="close" title="Fechar">×</button>
+    </div>
+    <br />
+    <div class="config-container">
+
+      <div class="config-header">
+          <a href="index.html" class="back-btn">← Voltar</a>
+        <h1 class="title">Configurações</h1>
+      </div>
+
+      <label for="apiKey">Groq API</label>
+      <small class="hint">
+        Crie sua chave API grátis no
+        <a href="https://console.groq.com/keys" target="_blank">site da Groq</a
+        >.
+      </small>
+
+      <input type="text" id="apiKey" placeholder="Insira sua chave da API..." />
+
+      <label for="instructions">Instruções para a IA:</label>
+      <textarea
+        id="instructions"
+        placeholder="Exemplo: Responda sem enrolar..."
+        required
+      ></textarea>
+
+      <button class="btn-save" id="saveBtn">Salvar Configurações</button>
+    </div>
+    <script type="module" src="./src/renderer.ts"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

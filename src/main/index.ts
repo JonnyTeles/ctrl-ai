@@ -10,6 +10,7 @@ const envPath = path.join(process.cwd(), '.env');
 dotenv.config({ path: envPath });
 //TODO: COLOCAR PRO USUARIO SELECIONAR O TIPO DE INSTRUÇÃO PRA IA
 //MELHORAR FRONT
+//TIRAR .ENV E COLOCAR EM PAGINA CONFIG 
 const assetsDir = path.join(__dirname, '../renderer/assets');
 const icoFile = fs.readdirSync(assetsDir).find(file => file.endsWith('.ico'));
 const iconPath = icoFile ? path.join(assetsDir, icoFile) : undefined;
@@ -34,7 +35,7 @@ function createWindow(): void {
     mainWindow.show()
   })
 
-  mainWindow.webContents.setWindowOpenHandler((details) => {
+  mainWindow.webContents.setWindowOpenHandler((details) => {  
     shell.openExternal(details.url)
     return { action: 'deny' }
   })
